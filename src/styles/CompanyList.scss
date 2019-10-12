@@ -1,7 +1,7 @@
 .companyList {
     display: flex;
     flex-direction: column;
-    margin: 25px 0 0 100px;
+    margin: 25px 0 0 118px;
     width: 250px;
     
     a {
@@ -9,6 +9,12 @@
         font-size: 12px;
     }
 
+    .adress {
+        a {
+            font-weight: bold;
+        }
+    }
+    
     .list {
         border: 1px solid #d4d9e3;
         border-radius: 3px;
@@ -27,6 +33,10 @@
 
         div:hover {
             background: #FAFBFC;
+        }
+
+        div.selected {
+            border-left: 2px solid #344279;
         }
     }
 }

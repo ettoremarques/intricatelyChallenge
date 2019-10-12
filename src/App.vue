@@ -1,9 +1,13 @@
 <template>
     <div id="app">
         <Header/>
-        <CompanyList 
-        :CompanyListData="CompanyListData" 
-        :Adress="Adress"/>
+        <div class="page">
+            <div class="page-content">
+                <CompanyList 
+                :CompanyListData="CompanyListData" 
+                :Adress="Adress"/>
+            </div>
+        </div>
     </div>
 </template>
 

@@ -5,8 +5,10 @@
     </div>
     <div class="list">
       <div 
-        v-for="(item, index) in this.CompanyListDataArray" 
-        :key="index">
+          v-for="(item, index) in this.CompanyListDataArray" 
+          :key="index"
+          :class="{selected: selected == index}"
+          @click="selected = index">
 
         <a>{{ item }}</a>
       </div>
@@ -24,7 +26,8 @@ export default {
     return {
       CompanyListDataArray: this.CompanyListData,
       pageAdress: this.Adress.page,
-      currentAdress: this.Adress.current
+      currentAdress: this.Adress.current,
+      selected: undefined
     };
   }
 };

@@ -6,13 +6,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 25px 0 0 100px;
+  margin: 25px 0 0 118px;
   width: 250px;
 }
 
 .companyList a {
   color: #7C86AE;
   font-size: 12px;
+}
+
+.companyList .adress a {
+  font-weight: bold;
 }
 
 .companyList .list {
@@ -34,5 +38,9 @@
 
 .companyList .list div:hover {
   background: #FAFBFC;
+}
+
+.companyList .list div.selected {
+  border-left: 2px solid #344279;
 }
 /*# sourceMappingURL=CompanyList.css.map */
