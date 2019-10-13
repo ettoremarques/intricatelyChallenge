@@ -38,6 +38,11 @@ body nav > div:not(.engine) {
   cursor: pointer;
 }
 
+body nav .header-content {
+  width: 1080px;
+  min-width: 1080px;
+}
+
 body nav .logo {
   padding-left: 30px;
 }
