@@ -1,3 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+#app {
+  font-family: Roboto, sans-serif;
+}
+
 .page {
   width: 100vw;
   min-width: 1080px;
@@ -17,9 +22,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 1080px;
 }
 /*# sourceMappingURL=main.css.map */
