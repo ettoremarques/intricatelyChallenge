@@ -1,5 +1,5 @@
-<<template>
-    <div class="companyDataForm">
+<template>
+    <div class="companyDataForm fade-up">
         <div class="form-text">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sequi praesentium eaque doloremque qui voluptatem hic rerum voluptates nostrum ex ad tempore odit</p>
         </div>
