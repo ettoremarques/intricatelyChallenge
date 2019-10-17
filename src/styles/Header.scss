@@ -31,7 +31,11 @@ body {
             min-width: 1080px;
         }
         .logo {
-            padding-left: 30px;
+            transition: 0.5s;
+        }
+        .logo:hover {
+            transform: rotateY(360deg);
+            
         }
 
         .engine {

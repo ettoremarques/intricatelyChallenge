@@ -44,7 +44,13 @@ body nav .header-content {
 }
 
 body nav .logo {
-  padding-left: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body nav .logo:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 body nav .engine {

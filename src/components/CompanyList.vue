@@ -7,7 +7,7 @@
       <div 
           v-for="(item, index) in this.CompanyListDataArray" 
           :key="index"
-          :class="{selected: selected == index}"
+          :class="{selected: selected == index || currentAdress == item}"
           @click="selected = index">
 
         <a>{{ item }}</a>

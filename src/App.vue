@@ -6,6 +6,8 @@
                 <CompanyList 
                 :CompanyListData="CompanyListData" 
                 :Adress="Adress"/>
+
+                <CompanyDataForm />
             </div>
         </div>
     </div>
@@ -15,11 +17,13 @@
 
 import Header from "./components/Header.vue"
 import CompanyList from "./components/CompanyList.vue"
+import CompanyDataForm from "./components/CompanyDataForm.vue"
 
 export default {
     components: {
         Header,
-        CompanyList
+        CompanyList,
+        CompanyDataForm
     },
     data () {
         return {
