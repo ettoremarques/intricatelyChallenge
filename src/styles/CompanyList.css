@@ -33,6 +33,7 @@
 
 .companyList .list div a {
   font-weight: bolder;
+  text-decoration: none;
 }
 
 .companyList .list div:hover {
