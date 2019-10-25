@@ -1,16 +1,15 @@
 <template>
   <div class="companyList">
     <div class="adress">
-        <a> {{ pageAdress }} / {{ currentAdress }} </a>
+        <a> {{ pageAdress }} / {{ $route.path.replace('_', ' ').replace('/', '').toUpperCase() }} </a>
     </div>
     <div class="list">
       <div 
           v-for="(item, index) in this.CompanyListDataArray" 
           :key="index"
-          :class="{selected: selected == index || currentAdress == item}"
-          @click="selected = index">
+          :class="{selected: '/' + item.url == $route.path}">
 
-        <a>{{ item }}</a>
+          <a :href="'#/' + item.url">{{ item.name }}</a>
       </div>
     </div>
   </div>
@@ -26,7 +25,6 @@ export default {
     return {
       CompanyListDataArray: this.CompanyListData,
       pageAdress: this.Adress.page,
-      currentAdress: this.Adress.current,
       selected: undefined
     };
   }
