@@ -1,5 +1,5 @@
 <template>
-  <div class="companyContent">
+  <div class="companyContent fade-up">
     <div class="companyHeader">
       <div class="companyLogo">
         <img :src="company.logo" />
@@ -193,11 +193,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body {
-  background-color: #e7e9f3 !important;
-}
-</style>
 <style lang="scss" scoped>
 .companyContent {
   display: flex;

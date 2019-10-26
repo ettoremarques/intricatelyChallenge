@@ -52,38 +52,39 @@ export default {
     @import url(http://fonts.googleapis.com/css?family=Roboto);
 
     body {
-    background-color: #ffffff;
+      background-color: #ffffff;
     }
     #app {
-    font-family: Roboto, sans-serif;
+      font-family: Roboto, sans-serif;
+      overflow: hidden;
     }
 
     .page {
-    width: 100vw;
-    min-width: 1080px;
-    display: flex;
-    justify-content: center;
+      width: 100vw;
+      min-width: 1080px;
+      display: flex;
+      justify-content: center;
 
-    .page-content {
+      .page-content {
         display: flex;
         flex-direction: row;
         width: 1080px;
-    }
+      }
     }
 
     .fade-up {
-    opacity: 0;
-    animation: fade-up 0.8s forwards;
+      opacity: 0;
+      animation: fade-up 0.8s forwards;
     }
 
     @keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translateY(32px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+      0% {
+          opacity: 0;
+          transform: translateY(32px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
     }
 </style>

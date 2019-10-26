@@ -17,6 +17,11 @@ export default new VueRouter( {
             path: '/company_data',
             name: "Company Data",
             component: CompanyDataForm
+        },
+        {
+            path: "/",
+            name: "Redirecting to Company Page",
+            component: CompanyPageContent
         }
     ]
 })
