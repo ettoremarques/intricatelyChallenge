@@ -8,20 +8,21 @@
         <router-view />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import CompanyList from "./components/CompanyList.vue";
-import CompanyDataForm from "./components/CompanyDataForm.vue";
+import Footer from "./components/Footer.vue"
 import VueRouter from "vue-router";
 
 export default {
   components: {
     Header,
     CompanyList,
-    CompanyDataForm
+    Footer
   },
   name: "CompanyDataForm",
   data() {
@@ -69,6 +70,7 @@ export default {
         display: flex;
         flex-direction: row;
         width: 1080px;
+        min-height: 76vh;
       }
     }
 

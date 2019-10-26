@@ -25,17 +25,22 @@
         </div>
 
         <div class="activity" v-for="(activity, index) in this.company.activities" :key="index">
+          
           <p class="time">{{ activity.num_days }} {{ activity.num_days > 1 ? "days" : "day" }} ago</p>
+          
           <img class="activityLogo" :src="activity.logo" />
+          
           <p class="activityDescription">
             <a class="name">{{ activity.name ? activity.name : company.name }}</a>
             {{ activity.action }}
             <br />
+           
             <a class="stripe">{{ activity.name ? company.name : ''}}</a>
             {{ activity.on ? "on" : ''}}
+            
             <a
               class="properties"
-            >{{ activity.num_properties }} {{ activity.num_properties > 1 ? "properties" : "property" }}</a>
+            >{{ activity.num_properties != 0 ? activity.num_properties : "" }} {{ activity.num_properties > 1 ? "properties" : activity.num_properties == 1 ? "property" : activity.product }}</a>
           </p>
         </div>
       </div>
@@ -105,64 +110,65 @@ export default {
             name: "Cloud Ochestration",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "08",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/content-delivery.png"),
+            name: "Express Scripts",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "10",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/waf-d-dos-security.png"),
+            name: "Kaiser Permanente",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "12",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/traffic-management.png"),
+            name: "Molina Healthcare",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "14",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/dns.png"),
+            name: "Express Scripts",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "15",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/performance-monitoring.png"),
+            name: "Kaiser Permanente",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "16",
             on: true
           },
           {
-            logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
+            logo: require("../images/CompanyPage/saas.png"),
+            name: "Molina Health",
             action: "replaced",
             num_properties: "1",
-            num_days: "8",
+            num_days: "17",
             on: true
           },
           {
             logo: require("../images/CompanyPage/video-platform.png"),
-            name: "Cloud Ochestration",
-            action: "replaced",
-            num_properties: "2",
-            num_days: "8",
-            on: true
+            name: "",
+            action: "lauched",
+            num_properties: "0",
+            product: "M-Cloud",
+            num_days: "18",
+            on: false
           }
         ],
         similarCompanies: [
@@ -271,7 +277,7 @@ export default {
         display: flex;
         border-bottom: 1px solid #d4d9e3;
         align-items: center;
-        justify-content: center;
+        margin-left: 10px;
 
         &:last-child {
           border-bottom: none;
