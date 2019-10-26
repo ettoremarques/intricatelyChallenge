@@ -15,6 +15,7 @@
 <script>
 import Header from "./components/Header.vue";
 import CompanyList from "./components/CompanyList.vue";
+import AdditionalNotes from "./components/AdditionalNotes.vue";
 import Footer from "./components/Footer.vue"
 import VueRouter from "vue-router";
 
@@ -22,7 +23,8 @@ export default {
   components: {
     Header,
     CompanyList,
-    Footer
+    Footer,
+    AdditionalNotes
   },
   name: "CompanyDataForm",
   data() {

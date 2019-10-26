@@ -71,6 +71,10 @@ export default {
 
         div.selected {
             border-left: 2px solid #344279;
+
+            & a {
+              color: #5C5C5D;
+            }
         }
     }
 }
