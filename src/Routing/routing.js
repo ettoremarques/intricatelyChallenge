@@ -1,8 +1,8 @@
 import VueRouter from 'vue-router';
 import Vue from 'vue';
 
-import CompanyDataForm from '../components/CompanyDataForm.vue'
-import CompanyPageContent from '../components/CompanyPageContent.vue'
+import CompanyData from '../Pages/CompanyData.vue'
+import CompanyPage from '../Pages/CompanyPage.vue'
 
 Vue.use(VueRouter);
 
@@ -11,17 +11,12 @@ export default new VueRouter( {
         {
             path: '/company_page',
             name: "Company Page",
-            component: CompanyPageContent
+            component: CompanyPage
         },
         {
             path: '/company_data',
             name: "Company Data",
-            component: CompanyDataForm
-        },
-        {
-            path: "/",
-            name: "Redirecting to Company Page",
-            component: CompanyPageContent
+            component: CompanyData
         }
     ]
 })

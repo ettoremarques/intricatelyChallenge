@@ -33,7 +33,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -41vw;
+  left: -42vw;
   top: -7vh;
 
   .modal {

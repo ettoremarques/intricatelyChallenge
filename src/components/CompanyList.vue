@@ -35,7 +35,7 @@ export default {
    .companyList {
     display: flex;
     flex-direction: column;
-    margin: 25px 0 0 118px;
+    margin: 25px 0 0 100px;
     width: 200px;
     
     a {
