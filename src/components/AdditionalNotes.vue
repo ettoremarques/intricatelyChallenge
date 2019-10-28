@@ -5,8 +5,11 @@
         <h5>ADDITIONAL NOTES</h5>
         <h4 class="close" @click="close">&times;</h4>
       </div>
-      <textarea class="additionalNotes" placeholder="e.g Good Tech Company"></textarea>
-      <button> SAVE </button>
+      <textarea
+        class="additionalNotes"
+        placeholder="e.g Good Tech Company"
+        v-model="AdditionalNotes"
+      ></textarea>
     </div>
   </div>
 </template>
@@ -14,27 +17,32 @@
 <script>
 export default {
   methods: {
-      close() {
-        this.$emit('close');
-      },
+    close() {
+      this.$store.state.AdditionalNotes.note = this.AdditionalNotes;
+      this.$emit("close");
     }
+  },
+  data() {
+    return {
+      AdditionalNotes: ""
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .background {
-  height: 93vh;
-  width: 100vw;
-  position: absolute;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
   display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: -42vw;
-  top: -7vh;
+  background-color: rgba(0, 0, 0, 0.1);
 
   .modal {
     width: 550px;
@@ -44,9 +52,9 @@ export default {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
-    
-    border: 1px solid #D4D9E3;
-    
+
+    border: 1px solid #d4d9e3;
+
     .modal-head {
       display: flex;
       h5 {
@@ -64,8 +72,8 @@ export default {
       resize: none;
 
       width: 450px;
-      height: 250px;
-      border: 1px solid #D4D9E3;
+      height: 175px;
+      border: 1px solid #d4d9e3;
       margin: 0 auto;
       border-radius: 5px;
       padding: 15px;
@@ -76,9 +84,9 @@ export default {
       width: 100px;
       height: 50px;
       border-radius: 4px;
-      background-color: #5D699A;
+      background-color: #5d699a;
       border: none;
-      color: #F1F2F6  ;
+      color: #f1f2f6;
       font-weight: bold;
       margin: 25px 48px 25px auto;
     }

@@ -21,7 +21,10 @@ const store = new Vuex.Store({
         ],
         Adress: {
             page: "HOME"
-        }
+        },
+        AdditionalNotes: {
+            note: ''
+        } 
     },
     getters: {
         adressList: state => {
@@ -29,6 +32,9 @@ const store = new Vuex.Store({
         },
         homePage: state => {
             return state.Adress;
+        },
+        additionalNotesModal: state => {
+            return state.AdditionalNotes;
         }
     }
 })
