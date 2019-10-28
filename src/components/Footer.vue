@@ -35,7 +35,7 @@ export default {};
 <style lang="scss" scoped>
 .footer {
   display: flex;
-  height: 100px;
+  height: 113px;
   width: 100vw;
   background-color: #f3f3f3;
   margin-top: 50px;

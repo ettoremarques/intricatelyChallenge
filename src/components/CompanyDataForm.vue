@@ -20,12 +20,33 @@
                 <label>Notes</label>
                 <textarea class="form-textarea" placeholder="e.g Good Tech Company"></textarea>
             </div>
+            <button type="button" class="showModal" @click="showModal">Additional Notes</button>
         </div>
+        <AdditionalNotes v-show="isModalVisible" @close="closeModal" />
     </div>
 </template>
 
 <script>
-export default {};
+import AdditionalNotes from "../components/AdditionalNotes.vue";
+
+export default {
+    components: {
+        AdditionalNotes
+    },
+    data() {
+        return {
+            isModalVisible: false,
+        }
+    },
+    methods: {
+        showModal() {
+            this.isModalVisible = true;
+        },
+        closeModal() {
+            this.isModalVisible = false;
+        }
+    }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -43,6 +64,8 @@ export default {};
     }
 
     .data-form {
+        display: flex;
+        flex-direction: column;
 
         label {
             display: block;
@@ -62,7 +85,7 @@ export default {};
         }
 
         .company {
-            margin: 35px 0;
+            margin: 10px 0;
         }
 
         input, textarea {
@@ -76,6 +99,16 @@ export default {};
 
         input::placeholder, textarea::placeholder {
             color: #D1D5E2;
+        }
+
+        .showModal {
+            margin: 10px 0 0 auto;
+            width: 150px;
+            height: 30px;
+            border-radius: 4px;
+            background-color: #5D699A;
+            border: none;
+            color: #F1F2F6;
         }
     }
 } 

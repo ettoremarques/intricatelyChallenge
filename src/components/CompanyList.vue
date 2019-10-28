@@ -35,7 +35,7 @@ export default {
    .companyList {
     display: flex;
     flex-direction: column;
-    margin: 25px 0 0 118px;
+    margin: 25px 0 0 100px;
     width: 200px;
     
     a {
@@ -71,6 +71,10 @@ export default {
 
         div.selected {
             border-left: 2px solid #344279;
+
+            & a {
+              color: #5C5C5D;
+            }
         }
     }
 }
